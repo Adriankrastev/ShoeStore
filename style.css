@@ -5,17 +5,6 @@ body {
     background-image: -o-linear-gradient(315deg,rgba(211,97,53,1.00) 0%,rgba(82,58,52,1.00) 100%);
     background-image: linear-gradient(135deg,rgba(211,97,53,1.00) 0.00%,rgba(82,58,52,1.00) 100%);
 }
-#wrapper {
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 1000px;
-    background-color: #777DA7;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 #wrapper #header {
     background-color: #E8E9EB;
     height: 110px;
@@ -83,5 +72,52 @@ body {
 #wrapper #main {
     background-color: #E8E9EB;
     margin-top: 10px;
-    height: 650px;
+    height: 550px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+#wrapper #main #AlignImg {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px 30px;
+}
+
+#wrapper #header #headding2 {
+    text-align: center;
+}
+#wrapper #footer {
+    background-color: #04724D;
+    margin-top: 10px;
+    height: 130px;
+}
+#wrapper #main #paragraph {
+    padding-bottom: 30px;
+}
+
+#wrapper {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 900px;
+    background-color: #777DA7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#wrapper #footer .icon {
+    width: 70px;
+    height: 70px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: ease 0.3s;
+    margin-top: 16px;
+}
+
+#wrapper #footer .icon:hover{
+	
+	transform: translateY(-5px);
 }
