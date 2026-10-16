@@ -45,10 +45,6 @@ body {
     font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 }
 
-#wrapper #menu .button:hover{
-    transform: translateY(-3px);
-}
-
 #menu .button a {
     text-decoration: none;
     background-color: #E8E9EB;
@@ -63,11 +59,13 @@ body {
     transition: ease 0.3s;
 }
 
-#menu .button a:hover{
+#menu .button a:hover,
+#menu .button .active {
     background-color: #5C5F65;
     color: #FFFFFF;
     -webkit-box-shadow: 2px 3px 4px -2px #000000;
     box-shadow: 2px 3px 4px -2px #000000;
+	transform: translateY(-3px);
 }
 #wrapper #main {
     background-color: #E8E9EB;
