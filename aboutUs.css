@@ -29,7 +29,7 @@ body {
     background-color: #04724D;
     height: 42px;
     padding-top: 7px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 #wrapper #menu .button {
     padding-left: 5px;
@@ -57,7 +57,7 @@ body {
     border-color: #FFFFFF #FFFFFF #393939 #3C3C3C;
     float: left;
     transition: ease 0.3s;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 
 #menu .button a:hover,
@@ -88,16 +88,16 @@ body {
 }
 #wrapper #footer {
     background-color: #04724D;
-    margin-top: 10px;
     height: 130px;
     font-size: 24px;
+    font-style: italic;
 }
 
 #wrapper {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    height: 1580px;
+    height: 1560px;
     background-color: #777DA7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -111,7 +111,7 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     transition: ease 0.3s;
-    margin-top: 27px;
+    margin-bottom: 5px;
 }
 
 #wrapper #footer .icon:hover{
@@ -123,4 +123,12 @@ body {
 }
 #wrapper #main #Pfix {
     font-size: 20px;
+}
+#wrapper #main #columnchart_values {
+    float: left;
+    margin-top: 20px;
+}
+#wrapper #main #resize {
+    font-size: 20px;
+    margin-top: 60px;
 }
