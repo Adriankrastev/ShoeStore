@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>За нас</title>
+<link href="aboutUs.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+  ['Продукт', 'Годишна продажба'],
+  ['Nike', 11],
+  ['Sport Shoes', 10],
+  ['Adidas', 4],
+  ['Official leather shoes', 8],
+  ['Air Jordan', 5]
+]);
+
+        var options = {
+          title: 'Продажби по години',
+		titleTextStyle: {fontSize: 20, fontWeight: 'bold'},
+			backgroundColor: '',
+          is3D: true,
+			slices: {
+            0: { color: 'green' },
+            1: { color: 'red' },
+			2: { color: 'orange' },
+			3: { color: 'pink' },
+			4: { color: 'blue' }
+          }
+			
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+	
+	<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["Copper", 8.94, "#b87333"],
+        ["Silver", 10.49, "silver"],
+        ["Gold", 19.30, "gold"],
+        ["Platinum", 21.45, "color: #e5e4e2"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Density of Precious Metals, in g/cm^3",
+        width: 600,
+        height: 400,
+		 backgroundColor: '', 
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+	
+	
+</head>
+
+<body>
+<div id="wrapper">
+	<header id="header">
+	  <img id="img" src="img/logo.png" width="100" height="100" alt=""/>
+<h1 id="alignn">VELOCIS FOOTWEAR</h1>
+		<h2 id="headding2">Магазин за обувки</h2>
+  </header>
+  <nav id="menu">
+	<div class="button"><a href="index.html">НАЧАЛО</a></div>
+    <div class="button"><a href="aboutUs.html" class="active">ЗА НАС</a></div>
+    <div class="button"><a href="#">ГАЛЕРИЯ</a></div>
+    <div class="button"><a href="#">КОНТАКТИ</a></div>
+    <div class="button"><a href="#">АВТОР</a></div>
+    <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
+    <div class="button"><a href="#">КАТАЛОГ</a></div>
+  </nav>
+  <main id="main">
+	   <p id="sizeP"><strong>Velocis Footwear</strong> е магазин за спортни и ежедневни обувки, който предлага разнообразие от качествени модели на известни марки. Нашата цел е да осигурим удобство, стил и достъпни цени за всеки клиент.</p>
+	  <div id="piechart_3d" style="width: 70%; height: 400px;"></div>
+	 <p id="Pfix">Диаграмата показва процентното разпределение на продажбите на обувки от различните марки в магазин Velocis Footwear. Най-голям дял от продажбите заема марката Nike с 28,9%, което показва, че тя е най-предпочитана сред клиентите. На второ място се нарежда Sport Shoes с 26,3%, следвана от Official Leather Shoes с 21,1%. Обувките Air Jordan представляват 13,2% от общите продажби, докато Adidas има най-малък дял от 10,5%. От данните се вижда, че клиентите проявяват по-голям интерес към спортните обувки. В заключение можем да кажем, че магазинът предлага разнообразие от марки, но Nike и Sport Shoes имат най-голям принос към общите продажби.</p>
+	  
+	  <!--- Потребители на уеб сайта през годините kolonna--->
+	  <div id="columnchart_values" style="width: 70%; height: 300px;"></div>
+	  
+	  
+	</main>
+  <footer id="footer">
+	  
+	<p id="size">Изработил: Адриан Иванов Кръстев 12а &copy; никой няма право да копира този сайт.</p>
+	  
+    <div class="icon"><a href="https://www.tiktok.com/@worldmacins" target="_self"><img src="img/tiktok-icon-free-png.webp" width="50" height="50" alt="ticktock"/></a></div>
+	  
+  <div class="icon"><a href="https://www.instagram.com/adikr88/" target="_self"><img src="img/Instagram_icon.png" width="50" height="50" alt="insta"/></a></div>
+	
+<div class="icon"><a href="https://www.facebook.com/profile.php?id=100041481893271&locale=bg_BG" target="_self"><img src="img/Facebook_Logo_(2019).png" width="50" height="50" alt="facebook"/></a></div>
+    <div id="datetime"></div>
+
+    <script>
+        // Функция за обновяване на датата и часа
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleString();
+        }
+
+        // Извикване на функцията веднага след зареждане на страницата
+        updateDateTime();
+
+        // Обновяване на датата и часа на всеки 1 секунда
+        setInterval(updateDateTime, 1000);
+    </script>
+
+
+  </footer>
+</div>
+</body>
+</html>
