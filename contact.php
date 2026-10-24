@@ -19,13 +19,65 @@
     <div class="button"><a href="aboutUs.html">ЗА НАС</a></div>
     <div class="button"><a href="gallery.html">ГАЛЕРИЯ</a></div>
     <div class="button"><a class="active" href="contact.php">КОНТАКТИ</a></div>
-    <div class="button"><a href="#">АВТОР</a></div>
+    <div class="button"><a href="author.html">АВТОР</a></div>
     <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
     <div class="button"><a href="#">КАТАЛОГ</a></div>
   </nav>
   <main id="main">
 	  
+	  <?php
+
+// дефинираме променливи и задаваме празни стойности
+$name = $email = $gender = $comment = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $comment = test_input($_POST["comment"]);
+  $gender = test_input($_POST["gender"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>Вашето мнение е важно за нас!</h2>   
+    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1949.9526908014527!2d24.325143847471665!3d42.20215048574838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acafe4d177b767%3A0x40f730e415bdb65b!2z0J_Qk9CY0Jw!5e0!3m2!1sbg!2sbg!4v1792254079824!5m2!1sbg!2sbg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
 	  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  <label class="label">Име:</label> <input id="name1" name="name">
+  <br><br>
+  <label class="label">E-mail:</label>
+  <input id="email" type="text" name="email">
+  <br><br>
+  <label class="label">Задайте въпрос:</label><br>
+  <textarea class="text" name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  <label class="label">Пол:</label> 
+  
+  <input id="gender" name="gender" type="radio" required="required" value="female">
+  <strong>Жена</strong>
+  <input id="gender1" type="radio" name="gender" required="required" value="male">
+  <strong>Мъж</strong>
+  <input class="gender" type="radio" name="gender"  value="other">
+  <strong>Друго</strong><br><br>
+  <input id="submit" type="submit" name="submit" value="Изпрати">  
+</form>
+
+<?php
+echo "<h2>Вие въведохте:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
 	  
 	</main>
    <footer id="footer">

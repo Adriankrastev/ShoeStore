@@ -71,7 +71,7 @@ body {
 #wrapper #main {
     background-color: #E8E9EB;
     margin-top: 10px;
-    height: 550px;
+    height: 570px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -93,7 +93,7 @@ body {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    height: 910px;
+    height: 930px;
     background-color: #777DA7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -114,4 +114,70 @@ body {
 #wrapper #footer .icon:hover{
 	
 	transform: translateY(-5px);
+}
+
+#main form .label {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+#main form .text
+{
+    width: 46%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    padding-bottom: 10px;
+}
+#main form #name1,
+#main form #email{
+    width: 49%;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    height: 20px;
+}
+
+#main form #name1:focus,
+#main form #email:focus,
+#main form .text:focus{
+    -webkit-box-shadow: 3px 5px 4px -2px #383838;
+    box-shadow: 3px 5px 4px -2px #383838;
+    border: 1px solid #5A5A5A;
+}
+
+#main form #gender,
+#main form #gender1
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+#main form #submit {
+    width: 49%;
+    background-image: -webkit-linear-gradient(315deg,rgba(37,117,252,1.00) 0%,rgba(106,17,203,1.00) 100%);
+    background-image: -moz-linear-gradient(315deg,rgba(37,117,252,1.00) 0%,rgba(106,17,203,1.00) 100%);
+    background-image: -o-linear-gradient(315deg,rgba(37,117,252,1.00) 0%,rgba(106,17,203,1.00) 100%);
+    background-image: linear-gradient(135deg,rgba(37,117,252,1.00) 0%,rgba(106,17,203,1.00) 100%);
+    height: 40px;
+    transition: 0.3s ease;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+#main form #submit:hover{
+    background-image: -webkit-linear-gradient(315deg,rgba(106,17,203,1.00) 0%,rgba(37,117,252,1.00) 100%);
+    background-image: -moz-linear-gradient(315deg,rgba(106,17,203,1.00) 0%,rgba(37,117,252,1.00) 100%);
+    background-image: -o-linear-gradient(315deg,rgba(106,17,203,1.00) 0%,rgba(37,117,252,1.00) 100%);
+    background-image: linear-gradient(135deg,rgba(106,17,203,1.00) 0%,rgba(37,117,252,1.00) 100%);
+    -webkit-box-shadow: 2px 5px 3px -2px #769DF4;
+    box-shadow: 2px 5px 3px -2px #769DF4;
+    transform: translateY(-3px);
+}
+#wrapper #main #map {
+    float: right;
+    width: 49%;
+    height: 300px;
 }
