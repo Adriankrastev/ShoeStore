@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Галерия</title>
+<link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+<link href="galleyy.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+  <header id="header">
+	  <img id="img" src="img/logo.png" width="100" height="100" alt=""/>
+<h1 id="alignn">VELOCIS FOOTWEAR</h1>
+		<h2 id="headding2">Магазин за обувки</h2>
+  </header>
+  <nav id="menu">
+	<div class="button"><a href="index.html">НАЧАЛО</a></div>
+    <div class="button"><a href="aboutUs.html">ЗА НАС</a></div>
+    <div class="button"><a class="active" href="gallery.html">ГАЛЕРИЯ</a></div>
+    <div class="button"><a href="contact.php">КОНТАКТИ</a></div>
+    <div class="button"><a href="#">АВТОР</a></div>
+    <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
+    <div class="button"><a href="#">КАТАЛОГ</a></div>
+  </nav>
+  <main id="main">
+    <img class="image" src="img/adiads.png" width="200" height="250" alt=""/>
+	<img class="image" src="img/adidascool.png" width="200" height="250" alt=""/> 
+	<img class="image" src="img/footballAdidas.png" width="200" height="250" alt=""/> 
+	<img class="image" src="img/shoeCool.png" width="165" height="250" alt=""/>
+	<img class="image" src="img/nikebasketball.png" width="200" height="250" alt=""/>
+	<img class="image" src="img/airJordan.png" width="200" height="250" alt=""/> 
+	<img class="image" src="img/manleaddershoes.png" width="200" height="250" alt=""/>
+	<img class="image" src="img/shoeNike.png" width="165" height="250" alt=""/>
+	<img class="image" src="img/shoeNikewhite.png" width="200" height="250" alt=""/>
+	
+	<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <button class="zoom-btn" id="zoomToggle">🔍 Zoom</button>
+    <img id="modalImage" src="" alt="Enlarged view">
+    </div>
+</div>
+	  <script>
+	  const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeBtn = document.querySelector('.close-btn');
+const zoomBtn = document.getElementById('zoomToggle');
+const images = document.querySelectorAll('.image');
+
+let isZoomed = false;
+
+// Open modal when an image is clicked
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+    resetZoom();
+  });
+});
+
+// Close modal on 'X' click
+closeBtn.addEventListener('click', closeModal);
+
+// Close modal when clicking outside the content container
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// Zoom toggle functionality
+zoomBtn.addEventListener('click', () => {
+  isZoomed = !isZoomed;
+  if (isZoomed) {
+    modalImg.classList.add('zoomed');
+    zoomBtn.textContent = '🔍 Zoom Out';
+  } else {
+    resetZoom();
+  }
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  resetZoom();
+}
+
+function resetZoom() {
+  isZoomed = false;
+  modalImg.classList.remove('zoomed');
+  zoomBtn.textContent = '🔍 Zoom';
+}
+	  
+	  </script>
+	
+	</main>
+   <footer id="footer">
+	  
+	<p id="size">Изработил: Адриан Иванов Кръстев 12а &copy; никой няма право да копира този сайт.</p>
+	  
+    <div class="icon"><a href="https://www.tiktok.com/@worldmacins" target="_self"><img src="img/tiktok-icon-free-png.webp" width="50" height="50" alt="ticktock"/></a></div>
+	  
+  <div class="icon"><a href="https://www.instagram.com/adikr88/" target="_self"><img src="img/Instagram_icon.png" width="50" height="50" alt="insta"/></a></div>
+	
+<div class="icon"><a href="https://www.facebook.com/profile.php?id=100041481893271&locale=bg_BG" target="_self"><img src="img/Facebook_Logo_(2019).png" width="50" height="50" alt="facebook"/></a></div>
+    <div id="datetime"></div>
+
+    <script>
+        // Функция за обновяване на датата и часа
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleString();
+        }
+
+        // Извикване на функцията веднага след зареждане на страницата
+        updateDateTime();
+
+        // Обновяване на датата и часа на всеки 1 секунда
+        setInterval(updateDateTime, 1000);
+    </script>
+
+
+  </footer>
+</div>
+</body>
+</html>

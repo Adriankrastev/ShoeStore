@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Контакт</title>
+<link href="contact.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+</head>
+
+<body>
+<div id="wrapper">
+	<header id="header">
+	  <img id="img" src="img/logo.png" width="100" height="100" alt=""/>
+<h1 id="alignn">VELOCIS FOOTWEAR</h1>
+		<h2 id="headding2">Магазин за обувки</h2>
+  </header>
+  <nav id="menu">
+	<div class="button"><a href="index.html">НАЧАЛО</a></div>
+    <div class="button"><a href="aboutUs.html">ЗА НАС</a></div>
+    <div class="button"><a href="gallery.html">ГАЛЕРИЯ</a></div>
+    <div class="button"><a class="active" href="contact.php">КОНТАКТИ</a></div>
+    <div class="button"><a href="#">АВТОР</a></div>
+    <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
+    <div class="button"><a href="#">КАТАЛОГ</a></div>
+  </nav>
+  <main id="main">
+	  
+	  
+	  
+	</main>
+   <footer id="footer">
+	  
+	<p id="size">Изработил: Адриан Иванов Кръстев 12а &copy; никой няма право да копира този сайт.</p>
+	  
+    <div class="icon"><a href="https://www.tiktok.com/@worldmacins" target="_self"><img src="img/tiktok-icon-free-png.webp" width="50" height="50" alt="ticktock"/></a></div>
+	  
+  <div class="icon"><a href="https://www.instagram.com/adikr88/" target="_self"><img src="img/Instagram_icon.png" width="50" height="50" alt="insta"/></a></div>
+	
+<div class="icon"><a href="https://www.facebook.com/profile.php?id=100041481893271&locale=bg_BG" target="_self"><img src="img/Facebook_Logo_(2019).png" width="50" height="50" alt="facebook"/></a></div>
+    <div id="datetime"></div>
+
+    <script>
+        // Функция за обновяване на датата и часа
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleString();
+        }
+
+        // Извикване на функцията веднага след зареждане на страницата
+        updateDateTime();
+
+        // Обновяване на датата и часа на всеки 1 секунда
+        setInterval(updateDateTime, 1000);
+    </script>
+
+
+  </footer>
+</div>
+</body>
+</html>
