@@ -123,3 +123,74 @@ body {
 	
 	transform: translateY(-5px);
 }
+
+#wrapper #main .image {
+    float: left;
+    transition: 0.3s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#wrapper #main .image:hover{
+    border-radius: 40px 20px;
+    -webkit-box-shadow: 2px 4px 6px -2px #000000;
+    box-shadow: 2px 4px 6px -2px #000000;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+#wrapper #main #Para {
+    margin-left: 280px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#main #navigation .button {
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s ease;
+    float: left;
+}
+#main #navigation a {
+    background-color: #BFDBFE;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #EAEAEA #EAEAEA #000000 #000000;
+    float: left;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#main #navigation a:hover{
+    background-color: #65778D;
+    color: #FFFFFF;
+    -webkit-box-shadow: 2px 4px 5px -2px #78839C;
+    box-shadow: 2px 4px 5px -2px #78839C;
+}
+
+#main #navigation .button:hover{
+	transform: translateY(-3px)
+}
+
+#main #Para #scroll {
+    overflow: auto;
+    background-color: #6A6A6A;
+    height: 300px;
+    float: right;
+    margin-bottom: 20px;
+}
+#Para #scroll .floatCont {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#wrapper #main #navigation {
+    background-color: #353D2F;
+    clear: both;
+    margin-top: 20px;
+    height: 40px;
+    padding-top: 20px;
+}
