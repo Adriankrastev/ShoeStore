@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Каталог</title>
+<link href="catalog.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+</head>
+
+<body>
+<div id="wrapper">
+	<header id="header">
+	  <img id="img" src="img/logo.png" width="100" height="100" alt=""/>
+<h1 id="alignn">VELOCIS FOOTWEAR</h1>
+		<h2 id="headding2">Магазин за обувки</h2>
+  </header>
+  <nav id="menu">
+	<div class="button"><a href="index.html">НАЧАЛО</a></div>
+    <div class="button"><a href="aboutUs.html">ЗА НАС</a></div>
+    <div class="button"><a href="gallery.html">ГАЛЕРИЯ</a></div>
+    <div class="button"><a href="contact.php">КОНТАКТИ</a></div>
+    <div class="button"><a href="author.html">АВТОР</a></div>
+    <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
+    <div class="button"><a href="catalog.html" class="active">КАТАЛОГ</a></div>
+  </nav>
+  <main id="main">
+	  
+	  <div id="search-container">
+	  <input type="text" id="searchInput" placeholder="Търсене на продукт..." onkeyup="searchProducts()">
+	</div>
+	  
+	  
+	<div id="section1">
+		
+	  <h1 class="headingAlign">Нашите топ предложения</h1>
+	  <div class="product">
+		<div class="img"><img class="img" src="img/adiads.png" width="240" height="177" alt=""/></div>
+		  <hr class="line">
+	    <div class="text">№ 1: Био пълнозърнесто брашно от лимец (1 кг)</div>
+	    <div class="price">Цена: 2,10 &#8364;</div>
+      </div>
+		
+	  <div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 2: Студено пресовано слънчогледово олио (750 мл)</div>
+	    <div class="price">Цена: 3,00 &#8364;</div>
+      </div>
+		
+		
+		<div class="product">
+		<div class="img"><img class="img" src="img/adidascool.png" width="240" height="177" alt=""/></div>
+		  <hr class="line">
+	    <div class="text">№ 3: Натурален пчелен мед от горски билки (450 г)</div>
+	    <div class="price">Цена: 10,00 &#8364;</div>
+      </div>
+			
+    </div>
+	  
+    <div id="section2">
+	  
+		<h1 class="headingAlign" >Здраве от земята</h1>
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 4: Сурови био орехови ядки (200 гр) </div>
+	    <div class="price">Цена: 4,00 &#8364;</div>
+      </div>
+	  
+		
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 5: Протеинов шейк на прах от конопено семе (350 г) </div>
+	    <div class="price">Цена: 5,50 &#8364;</div>
+      </div>
+		
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 6: Био ябълков оцет (500 мл)</div>
+	    <div class="price">Цена: 6,00 &#8364;</div>
+      </div>
+		
+		
+	  </div>
+	  
+	  
+    <div id="section3">
+	  <h1 class="headingAlign" >Традиционен вкус</h1>
+	  
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 7: Краве кисело мляко с 3.6% масленост(400 г)</div>
+	    <div class="price">Цена: 2,80 &#8364;</div>
+      </div>
+		
+		
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 8: Зряло краве сирене „Еколаби“ (800 г)</div>
+	    <div class="price">Цена: 12,50 &#8364;</div>
+      </div>
+		
+		
+		<div class="product">
+		<div class="img"> </div>
+		  <hr class="line">
+	    <div class="text">№ 9: Хляб с квас от лимец (600 г)</div>
+	    <div class="price">Цена: 2,00 &#8364;</div>
+      </div>
+		
+    </div>
+	  <nav id="navigation">
+		  <div class="button"><a href="#wrapper">Към
+Началото</a></div>
+	    <div class="button"><a href="#section1">Към Топ предложенията ни</a></div>
+		  <div class="button"><a href="#section2">Към Здраве от земята</a></div>
+		  <div id="mButton" class="button"><a  href="#section3">Към Традиционен вкус</a></div>
+      </nav>
+	  
+	  
+	</main>
+	
+	<script>
+    function searchProducts() {
+      var input = document.getElementById('searchInput');
+      var filter = input.value.toLowerCase();
+      var products = document.getElementsByClassName('product');
+
+      for (var i = 0; i < products.length; i++) {
+        var textDiv = products[i].getElementsByClassName('text')[0];
+        if (textDiv) {
+          var txtValue = textDiv.textContent || textDiv.innerText;
+          if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            products[i].style.display = "";
+          } else {
+            products[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+	
+   <footer id="footer">
+	  
+	<p id="size">Изработил: Адриан Иванов Кръстев 12а &copy; никой няма право да копира този сайт.</p>
+	  
+    <div class="icon"><a href="https://www.tiktok.com/@worldmacins" target="_self"><img src="img/tiktok-icon-free-png.webp" width="50" height="50" alt="ticktock"/></a></div>
+	  
+  <div class="icon"><a href="https://www.instagram.com/adikr88/" target="_self"><img src="img/Instagram_icon.png" width="50" height="50" alt="insta"/></a></div>
+	
+<div class="icon"><a href="https://www.facebook.com/profile.php?id=100041481893271&locale=bg_BG" target="_self"><img src="img/Facebook_Logo_(2019).png" width="50" height="50" alt="facebook"/></a></div>
+    <div id="datetime"></div>
+
+    <script>
+        // Функция за обновяване на датата и часа
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleString();
+        }
+
+        // Извикване на функцията веднага след зареждане на страницата
+        updateDateTime();
+
+        // Обновяване на датата и часа на всеки 1 секунда
+        setInterval(updateDateTime, 1000);
+    </script>
+
+
+  </footer>
+</div>
+</body>
+</html>

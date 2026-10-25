@@ -21,7 +21,7 @@
     <div class="button"><a class="active" href="contact.php">КОНТАКТИ</a></div>
     <div class="button"><a href="author.html">АВТОР</a></div>
     <div class="button"><a href="#">ПРОМОЦИЯ</a></div>
-    <div class="button"><a href="#">КАТАЛОГ</a></div>
+    <div class="button"><a href="catalog.html">КАТАЛОГ</a></div>
   </nav>
   <main id="main">
 	  
