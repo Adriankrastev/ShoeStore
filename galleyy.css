@@ -92,7 +92,7 @@ body {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    height: 1170px;
+    height: 1190px;
     background-color: #777DA7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -208,4 +208,3 @@ body {
   transform: scale(1.6);
   cursor: grab;
 }
-

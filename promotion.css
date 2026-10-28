@@ -92,7 +92,7 @@ body {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    height: 910px;
+    height: 930px;
     background-color: #777DA7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -123,6 +123,7 @@ body {
     margin-left: 20px;
     margin-top: 10px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 #main .product .img {
     border-top-left-radius: 50px 50px;
@@ -159,4 +160,7 @@ body {
     clear: both;
     font-weight: bolder;
     margin-right: 20px;
+}
+#wrapper #main video {
+    clear: both;
 }
