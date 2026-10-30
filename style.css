@@ -123,3 +123,31 @@ body {
 	
 	transform: translateY(-5px);
 }
+
+
+#ticker {overflow:hidden;
+	background:#04724d;
+	color:#fff;
+	padding:10px 0;
+	font-size:11px;
+	letter-spacing:3px }
+
+#ticker span { display:inline-block;
+	white-space:nowrap;
+	animation: slide 20s linear 0ms infinite normal forwards;
+	padding-left:30px}
+
+#ticker:hover span {animation-play-state: paused;
+}
+
+@keyframes slide { 
+	0% {
+		
+	transform:translateX(0)
+	
+	}
+	
+	100% {
+		transform:translateX(-40%)
+	}
+}
